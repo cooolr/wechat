@@ -1,8 +1,11 @@
 # wechat
 
 命令行微信聊天 -- wechat
+
 Author: lr.cool
+
 使用方法:
+
 python wechat.py  --> 等待弹出二维码，扫描登陆
 
 1. 直接输入文本回车，即可发送消息给默认联系人
