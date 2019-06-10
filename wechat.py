@@ -30,6 +30,8 @@ GroupChat = ["°ο°°ο°°ο°", "活捉那个小涂"]
 Pictures = "C:\\Users\\lr\\Pictures"
 # 联系人活群聊排序，序号回复 [无需修改]
 NickList = []
+# 允许接收的消息类型 [无需修改]
+ContentType = ['Text', 'Map', 'Card', 'Sharing', 'Picture', 'Recording', 'Video', 'Friends']
 
 
 def get_new_file(path):
@@ -41,7 +43,7 @@ def get_new_file(path):
     return open(files[-1], "rb")
 
 
-@itchat.msg_register(itchat.content.INCOME_MSG[:-1])
+@itchat.msg_register(ContentType)
 def text_reply_friend(msg):
     """
     处理私聊消息
@@ -61,7 +63,7 @@ def text_reply_friend(msg):
     print(text)
 
 
-@itchat.msg_register(itchat.content.INCOME_MSG[:-1], isGroupChat=True)
+@itchat.msg_register(ContentType, isGroupChat=True)
 def text_reply_groupchat(msg):
     """
     处理群聊消息
