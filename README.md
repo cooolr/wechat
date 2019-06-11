@@ -23,6 +23,7 @@ python wechat.py  --> 等待弹出二维码，扫描登陆
 
 使用方法:
 python wechats.py  --> 等待弹出二维码，扫描登陆
+
 python wechatc.py  --> 接受文本输入
 
 1. 直接输入文本回车，即可发送消息给默认联系人
@@ -47,7 +48,8 @@ set -g default-command /bin/zsh
 
 第一次使用zsh需要命令行输入zsh，进行初始化动作
 
-tmux上下分屏
+1. 输入tmux进入tmux模式
+2. tmux上下分屏
 ```
 ctrl + b + "
 ```
