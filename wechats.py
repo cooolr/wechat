@@ -27,7 +27,7 @@ from rpyc import Service
 from rpyc import ThreadedServer
 
 
-# 默认联系人, 微信名称，不是备注 [需要修改]
+# 默认联系人, 备注或微信名 [需要修改]
 nickname = "ie6"
 # 允许接收消息的群聊 [需要修改]
 GroupChat = ["°ο°°ο°°ο°", "活捉那个小涂"]
@@ -120,7 +120,7 @@ class Wechat(Service):
             # 获取私聊联系人昵称
             else:
                 try:
-                    temp_username = [i["UserName"] for i in itchat.get_friends() if i["NickName"]==temp_nickname][0]
+                    temp_username = [i["UserName"] for i in itchat.get_friends() if temp_nickname in (i["NickName"], i["RemarkName"])][0]
                 except:
                     print("找不到指定联系人: {}".format(temp_nickname))
                     return
