@@ -91,7 +91,7 @@ def auto_login():
     """
     global itchat,username
     itchat.auto_login(hotReload=True)
-    username = [i["UserName"] for i in itchat.get_friends() if i["NickName"]==nickname][0]
+    username = [i["UserName"] for i in itchat.get_friends() if nickname in (i["NickName"], i["RemarkName"])][0]
     itchat.run()
 
 
