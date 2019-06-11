@@ -74,7 +74,7 @@ def text_reply_groupchat(msg):
         return
     temp_nickname = "{} - {}".format(msg["User"]["NickName"], msg["ActualNickName"])
     # 联系人排序
-    if not temp_nickname in NickList:
+    if not msg["User"]["NickName"] in NickList:
         NickList.append(msg["User"]["NickName"])
     # 打印非文本消息类型
     if msg["MsgType"] != 1:
