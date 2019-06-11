@@ -35,19 +35,23 @@ python wechatc.py  --> 接受文本输入
 6. 文本消息为!开头的将被os.system执行
 7. 指定的群聊需要确认是否已保存到通讯录
 
-在linux下结合tmux使用多窗口效果最佳
+--- 
+
+
+### 在linux下结合tmux使用多窗口效果最佳
 ```
 sudo apt-get install zsh tmux -y
 ```
 
+第一次使用zsh需要命令行输入zsh，进行初始化动作
+
+新加.tmux.conf，增加鼠标支持
 > vim ~/.tmux.conf
 ```
 # 允许鼠标
 set -g mouse on
 set -g default-command /bin/zsh
 ```
-
-第一次使用zsh需要命令行输入zsh，进行初始化动作
 
 tmux使用方法:
 ```
