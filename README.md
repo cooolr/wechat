@@ -37,7 +37,7 @@ python wechatc.py  --> 接受文本输入
 
 在linux下结合tmux使用多窗口效果最佳
 ```
-sudo apt-get install zsh tmux
+sudo apt-get install zsh tmux -y
 ```
 
 > vim ~/.tmux.conf
@@ -49,8 +49,20 @@ set -g default-command /bin/zsh
 
 第一次使用zsh需要命令行输入zsh，进行初始化动作
 
-1. 输入tmux进入tmux模式
-2. tmux上下分屏
+tmux使用方法:
 ```
-ctrl + b + "
+# 进入tmux
+$ tmux
+
+# 上下分屏
+ctrl b + "
+
+# 关闭窗口
+ctrl b + x
+
+# 后台运行
+ctrl b + d
+
+# 进入后台tmux
+ctrl b + a
 ```
