@@ -16,12 +16,13 @@ python wechat.py  --> 等待弹出二维码，扫描登陆
 7. 指定的群聊需要确认是否已保存到通讯录
 8. 新消息的打印会打断正在输入的文本显示，盲打完回车发送即可
 
-
+--- 
 
 
 ### 命令行微信聊天多窗口 -- wechats.py / wechatc.py
 
 使用方法:
+
 python wechats.py  --> 等待弹出二维码，扫描登陆
 
 python wechatc.py  --> 接受文本输入
