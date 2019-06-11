@@ -56,7 +56,8 @@ def text_reply_friend(msg):
     global NickList
     ctime = time.ctime()[11:19]
     # 获取发送人的昵称
-    temp_nickname = [i["NickName"] for i in itchat.get_friends() if i["UserName"]==msg["FromUserName"]][0]
+    temp_nickname = [i for i in itchat.get_friends() if i["UserName"]==msg["FromUserName"]][0]
+    temp_nickname = temp_nickname["RemarkName"] if temp_nickname["RemarkName"] else temp_nickname["NickName"]
     # 联系人排序
     if not temp_nickname in NickList:
         NickList.append(temp_nickname)
