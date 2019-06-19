@@ -49,6 +49,7 @@ sudo apt-get install zsh tmux -y
 > vim ~/.tmux.conf
 ```
 # 允许鼠标
+# setw -g mode-mouse on
 set -g mouse on
 set -g default-command /bin/zsh
 ```
