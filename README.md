@@ -79,4 +79,7 @@ tmux a
 
 # 进入到目标session
 tmux a -t your_session_name
+
+# 在tmux里选择session
+ctrl b + s
 ```
