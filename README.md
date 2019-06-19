@@ -54,9 +54,16 @@ set -g default-command /bin/zsh
 ```
 
 tmux使用方法:
+> https://www.jianshu.com/p/c3e1ed08f029
 ```
-# 进入tmux
+# 进入到临时创建的session中
 $ tmux
+
+# 创建指定命名的session
+tmux new -s  your_session_name
+
+# 查看当前所有的tmux-session
+tmux ls
 
 # 上下分屏
 ctrl b + "
@@ -67,6 +74,9 @@ ctrl b + x
 # 后台运行
 ctrl b + d
 
-# 进入后台tmux
-ctrl b + a
+# 进入最近退出的session
+tmux a
+
+# 进入到目标session
+tmux a -t your_session_name
 ```
