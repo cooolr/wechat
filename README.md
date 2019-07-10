@@ -49,8 +49,6 @@ sudo apt-get install zsh tmux -y
 > vim ~/.tmux.conf
 ```
 # 允许鼠标
-# centos
-setw -g mode-mouse on
 # ubuntu
 set -g mouse on
 set -g default-command /bin/zsh
@@ -70,6 +68,12 @@ tmux ls
 
 # 上下分屏
 ctrl b + "
+
+# 切换上下屏
+ctrl b + o
+
+# 屏幕滚动
+ctrl b + [
 
 # 关闭窗口
 ctrl b + x
